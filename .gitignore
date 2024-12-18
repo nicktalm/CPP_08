@@ -1,0 +1,5 @@
+.devcontainer
+.vscode
+*.o
+easyfind
+.DS_Store
