@@ -6,7 +6,7 @@
 /*   By: ntalmon <ntalmon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 12:54:15 by ntalmon           #+#    #+#             */
-/*   Updated: 2025/02/03 13:55:58 by ntalmon          ###   ########.fr       */
+/*   Updated: 2025/02/10 13:36:34 by ntalmon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,7 @@ unsigned int Span::longestSpan(void)
 {
 	if (_list.size() <= 1)
 		throw std::runtime_error("Not enough numbers to calculate span");
-	std::multiset<int>::iterator it = _list.begin();
-	std::multiset<int>::iterator it2 = _list.end();
-	it2--;
-	return std::abs(*it - *it2);
+	std::multiset<int>::iterator it1 = _list.begin();
+	std::multiset<int>::reverse_iterator it2 = _list.rbegin();
+	return std::abs(*it1 - *it2);
 }

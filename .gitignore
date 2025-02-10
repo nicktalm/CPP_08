@@ -2,4 +2,6 @@
 .vscode
 *.o
 easyfind
+span
+mutated
 .DS_Store
